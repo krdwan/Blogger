@@ -1,3 +1,8 @@
+Blogger
+
+This is a full-stack project using Ruby on Rails that displays Blog Articles
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
