@@ -17,26 +17,26 @@
 #
 
 ####### uncomment starting form here ######
-#default: &default
-#  adapter: postgresql
-#  encoding: unicode
-#  # For details on connection pooling, see Rails configuration guide
-#  # http://guides.rubyonrails.org/configuring.html#database-pooling
-#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-#development:
-#  <<: *default
-#  database: blogger_development
+development:
+  <<: *default
+  database: blogger_development
 
-#test:
-#  <<: *default
-#  database: blogger_test
+test:
+  <<: *default
+  database: blogger_test
 
-#production:
-#  <<: *default
-#  database: blogger_production
-#  username: blogger
-#  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: blogger_production
+  username: blogger
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
 ####### uncomment to here ######
 
@@ -103,23 +103,23 @@
 
 #### existing yml file
 
-default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+#default: &default
+#  adapter: sqlite3
+#  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#  timeout: 5000
 
-development:
-  <<: *default
-  database: db/development.sqlite3
+#development:
+#  <<: *default
+#  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+#test:
+#  <<: *default
+#  database: db/test.sqlite3
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+#production:
+#  <<: *default
+#  database: db/production.sqlite3
 
